@@ -2,6 +2,17 @@
 %______________________________________________________________________________________________________________________
 % @brief    LaTeX2e Resume for Varun Khaneja
 \documentclass[margin,line]{resume}
+    %% LaTeX Preamble - Common packages
+    \usepackage[utf8]{inputenc} % Any characters can be typed directly from the keyboard, eg éçñ
+    \usepackage{flafter}  % Don't place floats before their definition
+    \usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+    \hypersetup{linkcolor=red,citecolor=blue,filecolor=dullmagenta,urlcolor=blue} % coloured links
+    \usepackage{cleveref}  % For linking URLs
+    \usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+    % \usepackage[activate]{pdfcprot}  % Turn on margin kerning (not in gwTeX)
+    \usepackage{pdfsync}  % enable tex source and pdf output syncronicity
+    \usepackage{soul}
+
 	%______________________________________________________________________________________________________________________
 	\begin{document}
 	\name{\Large Varun Khaneja}
@@ -11,23 +22,25 @@
 	% Contact Information
 	\section{\mysidestyle Contact\\Information}
 
-	www: http://aawc.github.com \hfill http://www.linkedin.com/in/khaneja\vspace{0mm}\\\vspace{0mm}%
-	e-mail: khaneja@gmail.com    \hfill \vspace{0mm}%
+	Email: \href{mailto:khaneja@gmail.com}{khaneja@gmail.com} \hfill Web: \href{http://aawc.github.io}{http://aawc.github.io}\\
+	GitHub: \href{http://github.com/aawc}{http://github.com/aawc} \hfill LinkedIn: \href{http://www.linkedin.com/in/khaneja}{http://www.linkedin.com/in/khaneja}
 
 	%__________________________________________________________________________________________________________________
 	% About Me
 	\section{\mysidestyle About Me}
-	I'm a versatile, seasoned developer, interested in opportunities in mobile application development, web development. I love to travel, and am fascinated by economics.
+	I'm a versatile, seasoned developer, interested in working on problems of scale. I like challenges, love travel, and am fascinated by economics.
+
 	%__________________________________________________________________________________________________________________
 	% Areas of Interests
 	\section{\mysidestyle Areas of Interests}
-	Mobile application development, Web development, Web browsers, Cloud services.
+	Fraud/Abuse prevention at scale, Mobile application development, Web development, Cloud infrastructure.
+
 	%__________________________________________________________________________________________________________________
 	% Programming Skills
 	\section{\mysidestyle Programming Skills}
-  \textit{C++}, \textit{Python}, \textit{JavaScript}, \textit{Java}, \textit{bash}, \textit{C\#}, \textit{XAML}.\\
+    \textit{Python}, \textit{C++}, \textit{JavaScript}, \textit{Java}, \textit{bash}.\\
 	Mobile: \textit{Android}, \textit{Windows Phone}, Familiarity with \textit{iOS}.\\
-	Desktop: \textit{Windows}, \textit{Linux}.
+	Desktop: \textit{Linux}, \textit{Windows}.
 
 %__________________________________________________________________________________________________________________
 	% Professional Experience
@@ -35,34 +48,42 @@
 
 	\textbf{Google Inc.}, Mountain View, USA. \hfill \textbf{July 2013 -- present}\vspace{2mm}\\\vspace{1mm}%
 	\textsl{Senior Anti-Abuse Engineer}\\
-  I develop internal tools to identify and prevent losses due to fraud and policy violations in AdWords that directly affect Google's bottomline and build advertiser trust.\\
-	This involves detecting and preventing instrument abuse, credit abuse, counterfeit, phishing, cloaking and various ways in which malicious advertisers try to run their ads over good advertisers.\\
-	Experience gained: \textit{Python}, \textit{JavaScript}, \textit{bash}
+    I develop tools to prevent losses due to fraud and policy violations in AdWords that directly affect Google's bottomline and build user and advertiser trust. This involves building systems to prevent instrument abuse, cloaking, credit abuse, counterfeit, and various other techniques employed by malicious advertisers to game the system.\\
+    \hl{My work has been instrumental in saving XX-XXX MM USD per quarter in financial losses and avoiding loss of user confidence.}\\
+    I have been leading the work on this project locally, and managing some 3-5 persons remotely as team priorities change.
+    I am also mentoring 1 person locally to help them grow into an engineering role.\\
+    I also spent 20\% of my time in Q3 2014 to build some features for the Android application of an un-announced project.\\
+    Experience gained: \textit{Fraud/Abuse fighting}, \textit{Python}, \textit{JavaScript}, \textit{Angular}, \textit{bash}
 
-	\textbf{Microsoft Corporation}, Redmond, USA. \hfill \textbf{July 2011 -- July 2013}\vspace{2mm}\\\vspace{1mm}%
+    \textbf{Microsoft Corporation}, Redmond, USA. \hfill \textbf{July 2011 -- July 2013}\vspace{2mm}\\\vspace{1mm}%
 	\textsl{Software Development Engineer II}\\
-	Developer on the \textit{Expression Blend for HTML} team. Expression Blend is a user interface design tool for creating graphical interfaces for web and desktop applications. Previously, I worked on implementing support for JavaScript controls for Windows 8 applications, and currently on an unannounced feature related to CSS.\\
+	Developer on the \textit{Expression Blend for HTML} team. Expression Blend is a user interface design tool for creating graphical interfaces for web and desktop applications. I implemented support for some JavaScript controls for Windows 8 applications, and \hl{CSS-like animation features for Windows 8 JS applications}.\\
 	Experience gained: \textit{C\#}, \textit{C++}, \textit{CSS}, \textit{JavaScript}, \textit{XAML}.
 
 	\textbf{Adobe Systems}, Noida, India. \hfill \textbf{June 2007 -- July 2011}\vspace{2mm}\\\vspace{1mm}%
 	\textsl{Computer Scientist}\\
-	Mobile: Built Adobe Reader for \textit{Android}, almost single-handedly for \textit{Windows Phone 7}, lead the effort for some of the other platforms.\\
+	Mobile: \hl{Built Adobe Reader for \textit{Android}, single-handedly for \textit{Windows Phone 7}}, lead the effort for some of the other platforms.\\
 	PDF Reader for Unix: Implemented \textit{Flash Player} playback inside \textit{Reader}; Owned the responsibility for a smooth installation experience.\\
 	\textit{Acrobat}: Joint ownership of development of the legacy Multimedia playing solution.\\
-	Experience gained: \textit{Android}, \textit{C++}, \textit{bash scripting}, \textit{Java}, \textit{Windows Phone 7}.
+	Experience gained: \textit{Android}, \textit{C++}, \textit{Java}, \textit{bash scripting}, \textit{Windows Phone 7}.
 
 	\textbf{Advanced Micro Devices (AMD)}, Bangalore, India. \hfill \textbf{July 2006 -- May 2007}\vspace{2mm}\\\vspace{1mm}%
 	\textsl{Design Engineer - II} \hfill Pre-silicon functional verification\\
 	Complete ownership of functional verification of the instruction cache and the floating-point unit (FPU) of the first generation of quad-core processor family from AMD.\\
 	Joint ownership of the functional verification of the Data Cache.\\
-	Verification was performed using a variety of approaches such as directed tests, whacker environment, and coverage including FCOV.
-
-	\textbf{IIT Kanpur}, Kanpur, India. \hfill \textbf{Dec 2004 - July 2005 - Dec 2005} \vspace{2mm}\\\vspace{1mm}%
-	\textsl{Course Tutor} \hfill Fundamentals of Computing\\
-	Delivered Java tutorials (three back-to-back terms) at the university.\\
-	Worked along with the instructor and fellow tutors in developing and adopting best techniques of imparting learning.
 
 	\vfill \break
+
+	%__________________________________________________________________________________________________________________
+	% Honours and Awards
+	\section{\mysidestyle Honours and Awards}
+
+	Awarded peer bonus 4 times at Google since December 2013.  \vspace{1mm}\\%
+	Awarded the ``Good Work'' award multiple times by teammates at Adobe, 2010.  \vspace{1mm}\\%
+	Spot award for diligence shown in working on security issues related to Multimedia playback for Acrobat 9, 2008.  \vspace{1mm}\\%
+	Won 1$^{st}$ prize in \textit{Coderupt}, an International Online Hacking Competition, 2006.  \vspace{1mm}\\%
+	Ranked 2$^{nd}$ ($99.98$ percentile) in GATE examination, 2004.  \vspace{1mm}\\%
+	Among top $0.1\%$ scorers in Mathematics in AISSE, 1998.
 
 	%__________________________________________________________________________________________________________________
 	% Education
@@ -74,19 +95,9 @@
 	\textsl{Bachelor of Technology} \hfill Score: $79.80$\%
 
 	%__________________________________________________________________________________________________________________
-	% Honours and Awards
-	\section{\mysidestyle Honours and Awards}
-
-	Nominated for the ``Good Work'' award multiple times by teammates, 2010.  \vspace{1mm}\\%
-	Spot award for diligence shown in working on security issues related to Multimedia playback for Acrobat 9, 2008.  \vspace{1mm}\\%
-	Bagged 1$^{st}$ prize in \textit{Coderupt}, an International Online Hacking Competition, 2006.            \vspace{1mm}\\%
-	Ranked 2$^{nd}$ ($99.98$ percentile) in GATE examination, 2004.                                           \vspace{1mm}\\%
-	Among top $0.1\%$ scorers in Mathematics in AISSE, 1998.
-
-	%__________________________________________________________________________________________________________________
-	% Courses Taken
-	\section{\mysidestyle Courses Taken}
-	Computer Architecture, Parallel Computer Architecture, Embedded Systems, VLSI Design for Parallel Architectures, Grid Computing, Computer System Security.
+	% Academic Courses
+	\section{\mysidestyle Academic Courses}
+	Parallel Computer Architecture, Embedded Systems, VLSI Design for Parallel Architectures, Computer System Security.
 
 	%__________________________________________________________________________________________________________________
 	% Academic Projects
@@ -99,10 +110,6 @@
 	\textbf{Prediction of header and addresses in a packet in a Distributed Shared Memory System}
 
 	The project dealt with the use of prediction algorithms for predicting the header and contents of request messages in a DSM system. This helps in reducing the effect of memory access latency and improves system performance considerably. To keep the hardware costs minimal, simple algorithms were used which needed to be finely configured.\hfill \emph{[September - November 2004]}
-	%__________________________________________________________________________________________________________________
-	% Referees
-	\section{\mysidestyle Referees}
-	{\sl Available on request.}
 
 	%______________________________________________________________________________________________________________________
 	\end{resume}
